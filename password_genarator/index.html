@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password Genarator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="container">
+        <h1>Genarate a<br><span>Random Password</span></h1>
+        <div class="controls">
+            <label for="lengthRange">Length: <span id="lengthValue">12</span></label>
+            <input type="range" id="lengthRange" min="4" max="32" value="12">
+        </div>
+
+        <div class="display">
+            <input type="text" id="password" placeholder="Password">
+            <img src="images/copy.png" onclick="copyPassword()" alt="Copy">
+        </div>
+        <button onclick="createPassword()"><img src="images/generate.png" alt="Generate"> Genarate Password</button>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
